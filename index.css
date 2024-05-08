@@ -1,0 +1,202 @@
+:root{
+    --first-skin-color: linear-gradient(to right, rgb(153, 0, 255) , rgb(51, 0, 94));
+    --skin-color: rgb(153, 0, 255);
+}
+.product_div{
+    padding-top: 4%;
+}
+.product_div h1,
+.product_div p{
+    text-align: center;
+}
+ .allproduct_btn {
+    padding-top: 1%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.productContainer {
+    width: 60%;
+    margin: auto;
+    padding-top: 2%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.pcard {
+    height: auto;
+    overflow: hidden;
+    max-width: 16rem;
+    border-radius: 1rem;
+    margin: 1rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0px 0px 20px 1px rgba(8, 8, 8, 0.5);
+}
+
+.pcard:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 10px 20px 0px rgba(8, 8, 8, 0.5);
+}
+
+.pcard .header {
+    z-index: 2;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0rem 0rem 4rem 0rem;
+}
+
+.pcard .header::before {
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0rem 0rem 4rem 0rem;
+}
+
+.pcard .header img {
+    width: 100%;
+}
+
+.pcard .footer {
+    z-index: 2;
+    text-align: center;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+}
+
+.pcard .footer::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 3rem 0rem 0rem 0rem;
+}
+
+.pcard .footer .title {
+    font-size: 1rem;
+    margin-bottom: .2rem;
+    transition: all .3s ease-in-out;
+}
+
+.pcard .footer p {
+    font-size: .9rem;
+}
+
+/* .productContainer .pcard:nth-child(2) .header img {
+    width: 120%;
+} */
+
+/* .productContainer .pcard:nth-child(3) .header img {
+    width: 120%;
+} */
+
+/* .productContainer .pcard:nth-child(1) .header::before {
+    background-image: linear-gradient(to bottom, #2f354d, #23252c);
+} */
+
+/* .productContainer .pcard:nth-child(1) .footer {
+    background: #23252c;
+} */
+.productContainer .pcard:nth-child(odd){
+    border-top: 4px solid var(--skin-color);
+    border-bottom: 4px solid var(--skin-color);
+    transition: all .3s ease-in-out;
+}
+
+.productContainer .pcard:nth-child(even) .header::before {
+    /* background-image: linear-gradient(to bottom, #01408f, #011842); */
+    background: var(--first-skin-color);
+    transition: all .3s ease-in-out;
+}   
+
+.productContainer .pcard:nth-child(even) .footer {
+    transition: all .3s ease-in-out;
+    background: var(--first-skin-color);
+}
+
+/* .productContainer .pcard:nth-child(3) .header::before {
+    background-image: linear-gradient(to bottom, #e93632, #501823);
+} */
+
+/* .productContainer .pcard:nth-child(3) .footer {
+    background: #501823;
+} */
+
+.buyNow {
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 5rem;
+    padding: .2rem 1rem;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.productContainer .pcard .buyNow{
+    transition: all .3s ease-in-out;
+    color: var(--first-skin-color);
+border: 2px solid var(--first-skin-color);
+}
+.allproduct_btn {
+    padding-bottom: 5%;
+}
+.allproduct_btn button{
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 5rem;
+    padding: .6rem 2rem;
+    color: black;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 20px 1px rgba(8, 8, 8, 0.5);
+    border: 2px solid var(--first-skin-color);
+}
+.allproduct_btn button,
+.productContainer .pcard .buyNow:hover {
+    color: #000;
+    background-color: var(--skin-color);
+}
+
+
+.allproduct_btn button:hover{
+    background-color: var(--text-white-color);
+    color: var(--first-skin-color);
+}
+
+
+@media (max-width: 1248px) {
+    .productContainer {
+        margin-top: 29rem;
+    }
+}
+
+@media (max-width: 832px) {
+    .productContainer:nth-child(1) {
+        margin-top: 92rem;
+    }
+}
